@@ -280,7 +280,7 @@
 							<sourceRoot>src/main/java</sourceRoot>
 							<wsdlOptions>
 								<wsdlOption>
-									<wsdl>${basedir}/src/main/resources/soap.wsdl</wsdl>
+									<wsdl>${basedir}/src/main/resources/soapservice.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-client</extraarg>
 										<extraarg>-verbose</extraarg>
