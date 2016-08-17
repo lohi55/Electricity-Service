@@ -22,7 +22,7 @@ public class CustomerClient {
 			throw new RuntimeException("Failed : HTTP error code : "
 			     + response.getStatus());
 		}		
-		Customer customer  = response.getEntity(Customer.class);	
-	  		return customer;
+		Customer cust  = response.getEntity(Customer.class);	
+	  		return cust;
 	}	
 }
