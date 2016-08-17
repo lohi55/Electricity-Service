@@ -42,7 +42,7 @@ public class RegistrationService {
 			List<ServicePlan> servicePlansList = serviceClient.getServicePlans();
 
 			
-			messageSender.sendMessage(cust.getCid() + " " + servicePlansList.get(2).getId());
+			messageSender.sendMessage(custId + " " + servicePlansList.get(2).getId());
 
 			messege = "Name " + servicePlansList.get(2).getServicePlan() + " & Ends on "
 					+ servicePlansList.get(2).getEndDate() ;

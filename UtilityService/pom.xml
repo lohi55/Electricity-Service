@@ -60,8 +60,6 @@
 
 		</plugins>
 		<finalName>UtilityService</finalName>
-
-
 	</build>
 
 	<!-- Specifying the Dependencies -->
