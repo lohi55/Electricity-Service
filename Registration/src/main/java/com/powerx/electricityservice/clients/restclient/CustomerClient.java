@@ -14,7 +14,7 @@ public class CustomerClient {
 		Client client = Client.create();
 
 		WebResource webResource = client
-		   .resource("http://localhost:8080/UtilityService/rest/cust"+id);
+		   .resource("http://localhost:8080/UtilityService/rest/cust/"+id);
 
 		ClientResponse response = webResource.accept("application/json")
                 .get(ClientResponse.class);
