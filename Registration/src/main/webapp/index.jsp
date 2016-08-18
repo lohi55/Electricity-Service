@@ -91,9 +91,10 @@ input[type=password] {
 		<h1>Registration</h1>
 		<form action="registration" method="post">
 			<hr>
-			<input type="text" name="firstname" id="name" placeholder="First Name" required /> 
-			<input type="text" name="lastname" id="name" placeholder="Last Name" required /> 
-			<input type="text" name="username" id="name" placeholder="User Name" required /> 
+			<input type="text" name="firstname" id="name" placeholder="First Name" required /> <br>
+			<input type="text" name="lastname" id="name" placeholder="Last Name" required /> <br>
+			
+			<input type="text" name="username" id="name" placeholder="User Name" required /> <br>
 			<input type="password" name="password" id="name" placeholder="Password" required /> <br>
 			<br>
 
