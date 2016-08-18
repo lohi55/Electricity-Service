@@ -10,24 +10,26 @@ import com.powerx.renpower.utilitywebservice.model.Customer;
 import com.powerx.renpower.utilitywebservice.service.CustomerService;
 
 
-
-
+/**
+ * This class is the webservice that actually being projected using the
+ * 
+ * @path annotation.
+ * @author Lohith Thota The data is being received in the form of a JSON object
+ */
 @Path("/cust")
 @Produces("application/json")
 public class CustomerServiceWS {
 
-	
-	
-	  @GET
-	  @Path("{id : \\d+}")
-	  @Produces(MediaType.APPLICATION_JSON)
+	@GET
+	@Path("{id : \\d+}")
+	@Produces(MediaType.APPLICATION_JSON)
 	public Customer getCustomerDetails(@PathParam("id") int id) {
 
 		CustomerService custService = new CustomerService();
 
 		Customer customer = custService.getCustomerDetails(id);
-		
+
 		return customer;
 	}
-	
+
 }

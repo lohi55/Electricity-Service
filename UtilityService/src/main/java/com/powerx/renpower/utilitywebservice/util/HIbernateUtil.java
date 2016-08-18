@@ -3,6 +3,10 @@ package com.powerx.renpower.utilitywebservice.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+/**
+ * This class is used to create a session.
+ * @author Lohith Thota
+ */
 @SuppressWarnings("deprecation")
 public class HIbernateUtil {
 
