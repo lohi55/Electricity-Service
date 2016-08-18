@@ -13,6 +13,6 @@
   Last Name :<b>${customer.lastname}</b><br>
   User Name :<b>${customer.username}</b><br><hr>
   <h2>Service Plan info</h2>
-  ${planinfo}
+  ${planInfo}
 </body>
 </html>

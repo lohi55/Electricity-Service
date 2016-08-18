@@ -20,9 +20,9 @@ public class CustomerServiceDao {
 	 *            is passed
 	 * @return Customer object is returned
 	 */
-	public Customer getCustomerDAO(int id) {
+	public Customer getCustomerDetails(int id) {
 
-		Session session = HIbernateUtil.getSessionFactory().getCurrentSession();
+		Session session = HIbernateUtil.getSession().getCurrentSession();
 		Customer cust = new Customer();
 
 		try {

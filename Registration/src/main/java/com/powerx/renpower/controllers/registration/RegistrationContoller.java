@@ -21,15 +21,15 @@ public class RegistrationContoller {
 	RegistrationService registrationService;
 
 	/**
-	 * Based on the url this method is mapped 
+	 * Based on the url pattern, this method is mapped 
 	 */
 	@RequestMapping("/registration")
 	public String registratation(@ModelAttribute("customer") Customer customer, Model model) {
 
-		String messege = registrationService.saveCustomer(customer);
+		String message = registrationService.saveCustomer(customer);
 
-		if (messege != null) {
-			model.addAttribute("planinfo", messege);
+		if (message != null) {
+			model.addAttribute("planInfo", message);
 			return "success";
 
 		} else

@@ -19,7 +19,7 @@ public class CustomerService{
 		
 		CustomerServiceDao cust_DAO = new CustomerServiceDao();
 		
-		Customer cust = cust_DAO.getCustomerDAO(c_id);
+		Customer cust = cust_DAO.getCustomerDetails(c_id);
 		
 		return cust;
 	}

@@ -14,7 +14,7 @@ import com.powerx.renpower.utilitywebservice.util.HIbernateUtil;
  */
 public class MessageServiceDao {
 
-	SessionFactory sessionFactory = HIbernateUtil.getSessionFactory();
+	SessionFactory sessionFactory = (SessionFactory) HIbernateUtil.getSession();
 	Session session = sessionFactory.getCurrentSession();
 
 	/**

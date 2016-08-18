@@ -22,16 +22,16 @@ public class ServicePlanDAO {
 	 * @return list of plans
 	 */
 	@SuppressWarnings("unchecked")
-	public List<ServicePlan> getServicePlanDAO() {
+	public List<ServicePlan> getServicePlans() {
 
 		List<ServicePlan> serviceList = new ArrayList<ServicePlan>();
-		Session session = HIbernateUtil.getSessionFactory().openSession();
+		Session session = HIbernateUtil.getSession().openSession();
 
 		try {
-			session.getTransaction().begin();
 			
+			//session.getTransaction().begin();
 			serviceList = session.createQuery("from ServicePlan").list();
-			session.getTransaction().commit();
+			//session.getTransaction().commit();
 		
 		} catch (HibernateException e) {
 			

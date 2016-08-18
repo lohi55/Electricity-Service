@@ -14,7 +14,7 @@ import com.powerx.renpower.utilitywebservice.ServicePlanWSService;
 public class ServicePlanClient {
 	
 	/**
-	 * This method returns a list of all the available services in the datbase
+	 * This method returns a list of all the available services in the database
 	 * @return list of service plans
 	 */
 	public  List<ServicePlan> getServicePlans(){
@@ -25,6 +25,7 @@ public class ServicePlanClient {
 		return powerPlans.getServicePlan();	
 	}
 	
+	//Java client to test out in Eclipse
 	/*public static void main(String[] args) {
 		ServicePlanClient client = new ServicePlanClient();
 		System.out.println(client.getServicePlans().get(1).getServicePlan());

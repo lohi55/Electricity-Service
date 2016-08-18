@@ -18,7 +18,7 @@ public class UtilityService {
 	public List<ServicePlan> getServicePlan() {
 		ServicePlanDAO servicePlanDAO = new ServicePlanDAO();
 
-		 List<ServicePlan> servicePlans = servicePlanDAO.getServicePlanDAO();
+		 List<ServicePlan> servicePlans = servicePlanDAO.getServicePlans();
 
 		return servicePlans;
 	}

@@ -20,7 +20,7 @@ import com.powerx.renpower.utilitywebservice.ServicePlan;
 public class RegistrationService {
 
 	@Autowired
-	RegistrationDAO regDAO;
+	RegistrationDAO registrationDAO;
 
 	@Autowired
 	CustomerClient custClient;
@@ -39,17 +39,23 @@ public class RegistrationService {
 	 */
 	@Transactional
 	public String saveCustomer(Customer customer) {
-		int custId = regDAO.saveCustomer(customer);
+		
+		//saving customer details to the database, getting customer id in return
+		int custId = registrationDAO.saveCustomer(customer);
 
 		String message = null;
 		if (custId != 0) {
 
+			// REST Call
 			Customer cust = custClient.getCustomerById(custId);
 
+			//SOAP Call
 			List<ServicePlan> servicePlansList = serviceClient.getServicePlans();
 
-			messageSender.sendMessage(custId + " " + servicePlansList.get(2).getId());
+			//JMS Message
+			messageSender.sendMessage(cust.getCid() + " " + servicePlansList.get(1).getId());
 
+			//Service plan info sent to the frontend
 			message = "Name " + servicePlansList.get(2).getServicePlan() + " & Ends on "
 					+ servicePlansList.get(2).getEndDate();
 
