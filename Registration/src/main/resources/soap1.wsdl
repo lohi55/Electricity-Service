@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <wsdl:definitions name="ServicePlanWSService"
-	targetNamespace="http://webservice.customerdetails.customerservice.com/"
+	targetNamespace="http://webservice.utilitywebservice.renpower.powerx.com/"
 	xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-	xmlns:tns="http://webservice.customerdetails.customerservice.com/"
+	xmlns:tns="http://webservice.utilitywebservice.renpower.powerx.com/"
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<wsdl:types>
 		<xs:schema elementFormDefault="unqualified"
-			targetNamespace="http://webservice.customerdetails.customerservice.com/"
-			version="1.0" xmlns:tns="http://webservice.customerdetails.customerservice.com/"
+			targetNamespace="http://webservice.utilitywebservice.renpower.powerx.com/"
+			version="1.0" xmlns:tns="http://webservice.utilitywebservice.renpower.powerx.com/"
 			xmlns:xs="http://www.w3.org/2001/XMLSchema">
 			<xs:element name="getServicePlan" type="tns:getServicePlan"></xs:element>
 			<xs:element name="getServicePlanResponse" type="tns:getServicePlanResponse"></xs:element>

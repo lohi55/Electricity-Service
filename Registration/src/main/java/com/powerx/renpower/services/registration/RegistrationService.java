@@ -10,7 +10,9 @@ import com.powerx.renpower.clients.soapclient.ServicePlanClient;
 import com.powerx.renpower.dao.registration.RegistrationDAO;
 import com.powerx.renpower.jms.MessageSender;
 import com.powerx.renpower.models.Customer;
-import com.powerx.renpower.soapservice.ServicePlan;
+import com.powerx.renpower.utilitywebservice.ServicePlan;
+
+
 
 
 

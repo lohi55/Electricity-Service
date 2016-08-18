@@ -299,7 +299,7 @@
 										<extraarg>-client</extraarg>
 										<extraarg>-verbose</extraarg>
 										<extraarg>-p</extraarg>
-										<extraarg>http://webservice.customerdetails.customerservice.com/=com.powerx.electricityservice.soapservice</extraarg>
+										<extraarg>http://webservice.utilitywebservice.renpower.powerx.com/=com.powerx.renpower.utilitywebservice</extraarg>
 									</extraargs>
 								</wsdlOption>
 							</wsdlOptions>

@@ -1,5 +1,5 @@
 
-package com.powerx.electricityservice.soapservice;
+package com.powerx.renpower.utilitywebservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
