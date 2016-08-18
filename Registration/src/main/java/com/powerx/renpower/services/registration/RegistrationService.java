@@ -12,12 +12,11 @@ import com.powerx.renpower.jms.MessageSender;
 import com.powerx.renpower.models.Customer;
 import com.powerx.renpower.utilitywebservice.ServicePlan;
 
-
-
-
-
-
-
+/**
+ * @author Lohith Thota 
+ * This service class calls the DAO layer to pass the
+ * customer object and save the customer details to the database.
+ */
 public class RegistrationService {
 
 	@Autowired
@@ -31,28 +30,33 @@ public class RegistrationService {
 
 	@Autowired
 	MessageSender messageSender;
-	
+
+	/**
+	 * This method passes the customer object to the DAO layer and custId is
+	 * returned.
+	 * @param customer
+	 * @return String containing the plan info.
+	 */
 	@Transactional
 	public String saveCustomer(Customer customer) {
 		int custId = regDAO.saveCustomer(customer);
 
-		String messege = null;
+		String message = null;
 		if (custId != 0) {
-			
+
 			Customer cust = custClient.getCustomerById(custId);
 
-			
 			List<ServicePlan> servicePlansList = serviceClient.getServicePlans();
 
-			
 			messageSender.sendMessage(custId + " " + servicePlansList.get(2).getId());
 
-			messege = "Name " + servicePlansList.get(2).getServicePlan() + " & Ends on "
-					+ servicePlansList.get(2).getEndDate() ;
+			message = "Name " + servicePlansList.get(2).getServicePlan() + " & Ends on "
+					+ servicePlansList.get(2).getEndDate();
 
-			return messege;
+			return message;
+
 		} else {
-			return messege;
+			return message;
 		}
 	}
 }

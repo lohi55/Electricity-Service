@@ -7,13 +7,21 @@ import com.powerx.renpower.utilitywebservice.ServicePlanWS;
 import com.powerx.renpower.utilitywebservice.ServicePlanWSService;
 
 
-
-
+/**
+ * @author Lohith Thota
+ * This class is used to make a SOAP call to the webservice
+ */
 public class ServicePlanClient {
 	
+	/**
+	 * This method returns a list of all the available services in the datbase
+	 * @return list of service plans
+	 */
 	public  List<ServicePlan> getServicePlans(){
+		
 		ServicePlanWSService service = new ServicePlanWSService();
 		ServicePlanWS  powerPlans = service.getServicePlanWSPort();
+		
 		return powerPlans.getServicePlan();	
 	}
 	
