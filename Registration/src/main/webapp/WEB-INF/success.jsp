@@ -8,10 +8,11 @@
 </head>
 <body>
 <h1>Registration Successful</h1>
+<h2>Customer Info</h2>
   First Name :<b>${customer.firstname}</b><br>
   Last Name :<b>${customer.lastname}</b><br>
-  User Name :<b>${customer.username}</b><br>
-  <h3>Service Plan info</h3>
+  User Name :<b>${customer.username}</b><br><hr>
+  <h2>Service Plan info</h2>
   ${planinfo}
 </body>
 </html>

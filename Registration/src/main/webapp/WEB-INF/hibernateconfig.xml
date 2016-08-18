@@ -26,7 +26,7 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>
-					com.powerx.electricityservice.models.Customer
+					com.powerx.renpower.models.Customer
 				</value>
 			</list>
 		</property>

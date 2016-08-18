@@ -17,9 +17,9 @@
 	<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory"
 		p:brokerURL="tcp://localhost:61616" />
 
-	<context:component-scan base-package="com.powerx.electricityservice.jms"></context:component-scan>
+	<context:component-scan base-package="com.powerx.renpower.jms"></context:component-scan>
 
-	<bean id="messageSender" class="com.powerx.electricityservice.jms.MessageSender"></bean>
+	<bean id="messageSender" class="com.powerx.renpower.jms.MessageSender"></bean>
 
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<constructor-arg name="connectionFactory" ref="connectionFactory"></constructor-arg>

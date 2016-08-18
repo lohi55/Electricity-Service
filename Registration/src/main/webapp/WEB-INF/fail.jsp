@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>registartion failed</h1>
+<h1>Customer Registration failed...!!</h1>
 </body>
 </html>

@@ -16,7 +16,7 @@ ol, ul, li {
 }
 
 body, input, textarea, select {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Times New Roman', sans-serif;
 	font-size: 16px;
 	color: #4c4c4c;
 }
@@ -34,7 +34,7 @@ html {
 	background-color: #ffffff;
 }
 
-.testbox {
+/* .testbox {
 	margin: 20px auto;
 	width: 343px;
 	height: 464px;
@@ -46,7 +46,7 @@ html {
 	-moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
 	box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
 	border: solid 1px #cbc9c9;
-}
+} */
 
 form {
 	margin: 0 30px;
@@ -61,7 +61,7 @@ hr {
 	opacity: 0.3;
 }
 
-input[type=text], input[type=password] {
+/* input[type=text], input[type=password] {
 	width: 300px;
 	height: 39px;
 	-webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
@@ -75,7 +75,7 @@ input[type=text], input[type=password] {
 	margin-left: -5px;
 	margin-top: 13px;
 	padding-left: 10px;
-}
+} */
 
 input[type=password] {
 	margin-bottom: 15px;

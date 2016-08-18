@@ -15,7 +15,7 @@
    <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory"  
  p:brokerURL="tcp://localhost:61616" />  
   
-<bean id="listener" class="com.customerservice.customerdetails.jms.JMSListener"></bean>  
+<bean id="listener" class="com.powerx.renpower.utilitywebservice.jms.JMSListener"></bean>  
   
 <jms:listener-container container-type="default" connection-factory="connectionFactory"  
  acknowledge="auto">  

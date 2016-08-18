@@ -7,7 +7,7 @@
 
 	<jaxws:server id="SerivcePlanWS" address="/serviceplan">
 		<jaxws:serviceBean>
-		<bean class = "com.customerservice.customerdetails.webservice.ServicePlanWS"></bean>
+		<bean class = "com.powerx.renpower.utilitywebservice.webservice.ServicePlanWS"></bean>
 		</jaxws:serviceBean>
 	</jaxws:server>
 	

@@ -26,8 +26,8 @@
 
         <!-- Mapping files -->
        <!--  <mapping resource="Customer.hbm.xml"/> -->
-       <mapping class="com.customerservice.customerdetails.model.Customer"/>
-       <mapping class="com.customerservice.customerdetails.model.ServicePlan"/>
+       <mapping class="com.powerx.renpower.utilitywebservice.model.Customer"/>
+       <mapping class="com.powerx.renpower.utilitywebservice.model.ServicePlan"/>
        
     </session-factory>
 
