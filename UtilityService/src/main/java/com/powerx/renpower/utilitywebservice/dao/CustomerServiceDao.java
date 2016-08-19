@@ -1,5 +1,6 @@
 package com.powerx.renpower.utilitywebservice.dao;
 
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
@@ -11,6 +12,8 @@ import com.powerx.renpower.utilitywebservice.util.HIbernateUtil;
  *         customer object and sends back to the service layer.
  */
 public class CustomerServiceDao {
+	
+	final static Logger logger = Logger.getLogger(CustomerServiceDao.class);
 
 	/**
 	 * This method gets the customer details, populates the customer object and
@@ -27,7 +30,10 @@ public class CustomerServiceDao {
 
 		try {
 			session.getTransaction().begin();
+			
 			cust = (Customer) session.get(Customer.class, id);
+			logger.info("Customer has been retrieved from the database");
+			
 			session.getTransaction().commit();
 
 		} catch (HibernateException e) {

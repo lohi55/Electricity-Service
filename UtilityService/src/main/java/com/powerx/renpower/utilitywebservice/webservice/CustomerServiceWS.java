@@ -6,6 +6,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.log4j.Logger;
+
 import com.powerx.renpower.utilitywebservice.model.Customer;
 import com.powerx.renpower.utilitywebservice.service.CustomerService;
 
@@ -19,6 +21,8 @@ import com.powerx.renpower.utilitywebservice.service.CustomerService;
 @Path("/cust")
 @Produces("application/json")
 public class CustomerServiceWS {
+	
+	final static Logger logger = Logger.getLogger(CustomerServiceWS.class);
 
 	@GET
 	@Path("{id : \\d+}")
