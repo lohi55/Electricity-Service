@@ -13,9 +13,7 @@ import com.powerx.renpower.utilitywebservice.service.CustomerService;
 
 
 /**
- * This class is the webservice that actually being projected using the
- * 
- * @path annotation.
+ * This class is the webservice that actually being projected using the @path annotation.
  * @author Lohith Thota The data is being received in the form of a JSON object
  */
 @Path("/cust")

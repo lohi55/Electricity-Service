@@ -8,8 +8,9 @@ import com.powerx.renpower.utilitywebservice.model.Customer;
 import com.powerx.renpower.utilitywebservice.util.HIbernateUtil;
 
 /**
- * @author Lohith Thota This class gets the customer details, populates the
- *         customer object and sends back to the service layer.
+ * @author Lohith Thota 
+ * This class gets the customer details, populates the
+ * customer object and sends back to the service layer.
  */
 public class CustomerServiceDao {
 	
@@ -19,8 +20,7 @@ public class CustomerServiceDao {
 	 * This method gets the customer details, populates the customer object and
 	 * sends back to the service layer.
 	 * 
-	 * @param id
-	 *            is passed
+	 * @param id is passed
 	 * @return Customer object is returned
 	 */
 	public Customer getCustomerDetails(int id) {
