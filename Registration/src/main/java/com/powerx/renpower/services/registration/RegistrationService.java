@@ -53,7 +53,7 @@ public class RegistrationService {
 			List<ServicePlan> servicePlansList = serviceClient.getServicePlans();
 
 			//JMS Message
-			messageSender.sendMessage(cust.getCid() + " " + servicePlansList.get(1).getId());
+			messageSender.sendMessage(custId + " " + servicePlansList.get(2).getId());
 
 			//Service plan info sent to the frontend
 			message = "Name " + servicePlansList.get(2).getServicePlan() + " & Ends on "

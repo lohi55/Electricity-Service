@@ -10,7 +10,7 @@ import com.powerx.renpower.models.Customer;
 
 /**
  * @author Lohith Thota
- * This class saves the customer details into the datbase
+ * This class saves the customer details into the database
  */
 @Repository
 public class RegistrationDAO {
