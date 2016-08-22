@@ -17,7 +17,7 @@ public class MessageService {
 	 * @param c_id
 	 * @param serv_id
 	 */
-	public void setCustomerService(int c_id, int serv_id) {
+	public void setCustomerService(int c_id, String serv_id) {
 
 		MessageServiceDao messServiceDao = new MessageServiceDao();
 

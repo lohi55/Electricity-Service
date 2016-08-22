@@ -28,7 +28,7 @@ public class JMSListener implements SessionAwareMessageListener<TextMessage> {
 			String[] msgAry = msg.split(" ");
 
 			int c_id = Integer.parseInt(msgAry[0]);
-			int serv_id = Integer.parseInt(msgAry[1]);
+			String serv_id = msgAry[1];
 
 			MessageService messService = new MessageService();
 			messService.setCustomerService(c_id, serv_id);

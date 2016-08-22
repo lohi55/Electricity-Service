@@ -21,6 +21,17 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	private int id;
+	
+	@Column(name = "serv_id", nullable = false)
+	private String sid;
+
+	public String getSid() {
+		return sid;
+	}
+
+	public void setSid(String sid) {
+		this.sid = sid;
+	}
 
 	@Column(name = "firstname", nullable = true)
 	private String firstname;
