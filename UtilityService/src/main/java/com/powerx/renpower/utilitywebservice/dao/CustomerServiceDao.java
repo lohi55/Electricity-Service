@@ -25,20 +25,24 @@ public class CustomerServiceDao {
 	 */
 	public Customer getCustomerDetails(int id) {
 
-		Session session = HIbernateUtil.getSession().getCurrentSession();
+		// Opening the session here
+		Session session = HIbernateUtil.getSession().openSession();
 		Customer cust = new Customer();
 
 		try {
-			session.getTransaction().begin();
+			//session.getTransaction().begin();
 			
 			cust = (Customer) session.get(Customer.class, id);
 			logger.info("Customer has been retrieved from the database");
 			
-			session.getTransaction().commit();
+			//session.getTransaction().commit();
+			
+			//Flushing the session
+			session.flush();
 
 		} catch (HibernateException e) {
 			e.printStackTrace();
-			session.close();
+			session.flush();
 		}
 		return cust;
 	}

@@ -25,6 +25,8 @@ public class ServicePlanDAO {
 	public List<ServicePlan> getServicePlans() {
 
 		List<ServicePlan> serviceList = new ArrayList<ServicePlan>();
+		
+		// Opening the session here
 		Session session = HIbernateUtil.getSession().openSession();
 
 		try {
@@ -32,11 +34,14 @@ public class ServicePlanDAO {
 			//session.getTransaction().begin();
 			serviceList = session.createQuery("from ServicePlan").list();
 			//session.getTransaction().commit();
+			
+			//Flushing the session
+			session.flush();
 		
 		} catch (HibernateException e) {
 			
 			e.printStackTrace();
-			session.close();
+			session.flush();
 		}
 
 		if (serviceList.isEmpty()) {

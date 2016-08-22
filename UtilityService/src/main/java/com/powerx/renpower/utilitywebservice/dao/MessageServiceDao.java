@@ -2,8 +2,6 @@ package com.powerx.renpower.utilitywebservice.dao;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
 import com.powerx.renpower.utilitywebservice.util.HIbernateUtil;
 
@@ -14,8 +12,11 @@ import com.powerx.renpower.utilitywebservice.util.HIbernateUtil;
  */
 public class MessageServiceDao {
 
-	SessionFactory sessionFactory = (SessionFactory) HIbernateUtil.getSession();
-	Session session = sessionFactory.getCurrentSession();
+	/*SessionFactory sessionFactory = (SessionFactory) HIbernateUtil.getSession();
+	Session session = sessionFactory.getCurrentSession();*/
+	
+	// Opening the session here
+	Session session = HIbernateUtil.getSession().openSession();
 
 	/**
 	 * This method takes in the paramaters customer ID & Service ID
@@ -25,7 +26,7 @@ public class MessageServiceDao {
 	 * @return boolean response based on the executeUpdate.
 	 */
 	public boolean updateCustomer(int custId, int serviceId) {
-		Transaction tx = session.beginTransaction();
+		//Transaction tx = session.beginTransaction();
 
 		Query query = session.createQuery("update Customer set serv_id = :serviceId where id = :custId");
 
@@ -33,7 +34,10 @@ public class MessageServiceDao {
 		query.setParameter("custId", custId);
 
 		int result = query.executeUpdate();
-		tx.commit();
+		
+		//Flushing the session
+		session.flush();
+		//tx.commit();
 
 		if (result == 1)
 			return true;
