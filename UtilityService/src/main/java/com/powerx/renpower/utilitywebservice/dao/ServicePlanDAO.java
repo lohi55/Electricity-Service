@@ -10,8 +10,9 @@ import com.powerx.renpower.utilitywebservice.model.ServicePlan;
 import com.powerx.renpower.utilitywebservice.util.HIbernateUtil;
 
 /**
- * @author Lohith Thota This class gets all the service plans present in the
- *         database serviceplan table in the form of a list.
+ * @author Lohith Thota 
+ * This class gets all the service plans present in the
+ * database serviceplan table in the form of a list.
  */
 public class ServicePlanDAO {
 
@@ -27,7 +28,7 @@ public class ServicePlanDAO {
 		List<ServicePlan> serviceList = new ArrayList<ServicePlan>();
 		
 		// Opening the session here
-		Session session = HIbernateUtil.getSession().openSession();
+		Session session = HIbernateUtil.getSession();
 
 		try {
 			

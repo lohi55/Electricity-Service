@@ -26,7 +26,7 @@ public class CustomerServiceDao {
 	public Customer getCustomerDetails(int id) {
 
 		// Opening the session here
-		Session session = HIbernateUtil.getSession().openSession();
+		Session session = HIbernateUtil.getSession();
 		Customer cust = new Customer();
 
 		try {
