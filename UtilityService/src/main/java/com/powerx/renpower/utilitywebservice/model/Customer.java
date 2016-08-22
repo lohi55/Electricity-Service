@@ -11,7 +11,7 @@ import javax.persistence.Table;
  * This is the customer entity class that is mapped to the customer table in the
  * database.
  * 
- * @author Bootcamp User 018
+ * @author Lohith Thota
  */
 @Entity
 @Table(name = "customer")
@@ -23,13 +23,13 @@ public class Customer {
 	private int id;
 	
 	@Column(name = "serv_id", nullable = false)
-	private String sid;
+	private int sid;
 
-	public String getSid() {
+	public int getSid() {
 		return sid;
 	}
 
-	public void setSid(String sid) {
+	public void setSid(int sid) {
 		this.sid = sid;
 	}
 
