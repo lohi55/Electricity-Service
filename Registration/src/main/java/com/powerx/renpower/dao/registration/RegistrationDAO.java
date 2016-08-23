@@ -2,7 +2,6 @@ package com.powerx.renpower.dao.registration;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -27,11 +26,13 @@ public class RegistrationDAO {
 	 */
 	public int saveCustomer(Customer customer) {
 		
-		Session session = mySessionFactory.getCurrentSession();
-		Transaction trans = session.beginTransaction();
+		Session session = mySessionFactory.openSession();/*getCurrentSession()*/;
+		//Transaction trans = session.beginTransaction();
 		
 		int custId = (Integer) session.save(customer);
-		trans.commit();
+		
+		//trans.commit();
+		session.flush();
 		
 		return custId;
 	}

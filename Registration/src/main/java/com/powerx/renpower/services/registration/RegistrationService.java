@@ -52,15 +52,15 @@ public class RegistrationService {
 
 			// REST Call
 			Customer cust = custClient.getCustomerById(custId);
-			logger.info("REST call has been completed");
+			//logger.info("REST call has been completed");
 
 			//SOAP Call
 			List<ServicePlan> servicePlansList = serviceClient.getServicePlans();
-			logger.info("SOAP call has been completed");
+			//logger.info("SOAP call has been completed");
 
 			//JMS Message
 			messageSender.sendMessage(custId + " " + servicePlansList.get(2).getId());
-			logger.info("JMS message has been sent");
+			//logger.info("JMS message has been sent");
 
 			//Service plan info sent to the frontend
 			message = "Name " + servicePlansList.get(2).getServicePlan() + " & Ends on "
