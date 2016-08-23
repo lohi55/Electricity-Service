@@ -22,17 +22,6 @@ public class Customer {
 	@Column(name = "id", nullable = false)
 	private int id;
 	
-	@Column(name = "serv_id", nullable = false)
-	private int sid;
-
-	public int getSid() {
-		return sid;
-	}
-
-	public void setSid(int sid) {
-		this.sid = sid;
-	}
-
 	@Column(name = "firstname", nullable = true)
 	private String firstname;
 

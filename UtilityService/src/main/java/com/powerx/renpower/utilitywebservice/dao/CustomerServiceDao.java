@@ -13,31 +13,29 @@ import com.powerx.renpower.utilitywebservice.util.HIbernateUtil;
  * customer object and sends back to the service layer.
  */
 public class CustomerServiceDao {
-	
+
 	final static Logger logger = Logger.getLogger(CustomerServiceDao.class);
 
 	/**
 	 * This method gets the customer details, populates the customer object and
 	 * sends back to the service layer.
 	 * 
-	 * @param id is passed
+	 * @param id
+	 *            is passed
 	 * @return Customer object is returned
 	 */
 	public Customer getCustomerDetails(int id) {
 
 		// Opening the session here
-		Session session = HIbernateUtil.getSession();
+		Session session = HIbernateUtil.getSession().openSession();
 		Customer cust = new Customer();
 
 		try {
-			//session.getTransaction().begin();
-			
+
 			cust = (Customer) session.get(Customer.class, id);
-			logger.info("Customer has been retrieved from the database");
-			
-			//session.getTransaction().commit();
-			
-			//Flushing the session
+			// logger.info("Customer has been retrieved from the database");
+
+			// Flushing the session
 			session.flush();
 
 		} catch (HibernateException e) {

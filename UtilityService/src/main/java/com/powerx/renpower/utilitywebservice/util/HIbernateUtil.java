@@ -1,6 +1,5 @@
 package com.powerx.renpower.utilitywebservice.util;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -26,7 +25,7 @@ public class HIbernateUtil {
 		}
 	}
 
-	public static Session getSession() {
-		return sessionFactory.openSession();
+	public static SessionFactory getSession() {
+		return sessionFactory;
 	}
 }
